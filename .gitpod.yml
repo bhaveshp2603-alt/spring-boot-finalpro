@@ -1,16 +1,8 @@
 tasks:
-  - name: backend
-    command: |
-      cd backend
-      ./mvnw spring-boot:run
-    openMode: tab
+  - command: cd backend && ./mvnw spring-boot:run
     port: 8080
 
-  - name: frontend
-    command: |
-      cd frontend
-      dotnet run --urls=http://localhost:5000
-    openMode: tab
+  - command: cd frontend && dotnet run --urls=http://localhost:5000
     port: 5000
 
 ports:
@@ -18,3 +10,4 @@ ports:
     onOpen: ignore
   - port: 5000
     onOpen: open-preview
+
