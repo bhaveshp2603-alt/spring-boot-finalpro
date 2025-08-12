@@ -1,13 +1,2 @@
-tasks:
-  - command: cd backend && ./mvnw spring-boot:run
-    port: 8080
 
-  - command: cd frontend && dotnet run --urls=http://localhost:5000
-    port: 5000
-
-ports:
-  - port: 8080
-    onOpen: ignore
-  - port: 5000
-    onOpen: open-preview
 
